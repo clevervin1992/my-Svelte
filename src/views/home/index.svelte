@@ -1,9 +1,15 @@
 <script>
   import svelteLogo from "../../assets/svelte.svg";
   import Counter from "@/components/Counter.svelte";
+  import Children from "@/components/Children.svelte";
+  import Card from "@/components/Card.svelte";
   import Router, { link, push, replace } from "svelte-spa-router";
 
   let params = { content: "form home params" };
+
+  function print(data) {
+    console.log(`params: ${data.detail}`);
+  }
 </script>
 
 <main>
@@ -19,6 +25,12 @@
 
   <div class="card">
     <Counter />
+  </div>
+  <div>
+    <Children number="12345678" />
+  </div>
+  <div>
+    <Card on:printParams={print} />
   </div>
   <div class="card">
     <!-- <a href="javascript;" use:link={"/test"}>To Test</a> -->

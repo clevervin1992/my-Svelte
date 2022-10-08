@@ -1,10 +1,10 @@
 /*
  * @Author: xing
  * @Date: 2022-09-29 15:32:28
- * @LastEditTime: 2022-09-30 11:44:39
+ * @LastEditTime: 2022-10-08 13:59:00
  * @LastEditors: xing
  * @Description: 
- * @FilePath: \vite-svelte\vite.config.js
+ * @FilePath: \my-Svelte\vite.config.js
  */
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
@@ -16,6 +16,7 @@ export default defineConfig({
   server:{
     open:true,
     port:8000,
+    proxy:{}
   },
   resolve: {
     alias: {
