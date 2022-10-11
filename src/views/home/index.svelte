@@ -8,7 +8,7 @@
   let params = { content: "form home params" };
 
   function print(data) {
-    console.log(`params: ${data.detail}`);
+    alert(`params: ${data.detail}`);
   }
 </script>
 
