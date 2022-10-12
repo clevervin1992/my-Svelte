@@ -1,5 +1,6 @@
 <script>
   import svelteLogo from "../../assets/svelte.svg";
+  import { get, post } from "@/utils/request.js";
   import Counter from "@/components/Counter.svelte";
   import Children from "@/components/Children.svelte";
   import Card from "@/components/Card.svelte";
@@ -10,6 +11,13 @@
   function print(data) {
     alert(`params: ${data.detail}`);
   }
+
+  function sendApi() {
+    get("/api/user").then((res) => {
+      console.log(res);
+    });
+  }
+  sendApi();
 </script>
 
 <main>
